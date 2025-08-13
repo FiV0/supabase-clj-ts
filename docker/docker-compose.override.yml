@@ -1,0 +1,5 @@
+# Docker Compose override file for Supabase auth configuration
+services:
+  auth:
+    environment:
+      GOTRUE_MAILER_SECURE_EMAIL_CHANGE_ENABLED: true

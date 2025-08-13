@@ -19,6 +19,7 @@ services:
     environment:
       - GOTRUE_SMTP_USER=
       - GOTRUE_SMTP_PASS=
+      - GOTRUE_MAILER_SECURE_EMAIL_CHANGE_ENABLED=false
   meta:
     ports:
       - 5555:8080
