@@ -24,12 +24,13 @@ export function LoginPage({ onSuccess, onSignUpClick }: LoginPageProps) {
           </div>
         </div>
       </div>
-      <div className="bg-muted relative hidden lg:block">
-        <div className="absolute inset-0 flex items-center justify-center text-muted-foreground">
-          <div className="text-center">
-            <GalleryVerticalEnd className="mx-auto mb-4 size-16 opacity-20" />
-            <p className="text-sm">Welcome to Supabase Hello World</p>
-          </div>
+      <div className="bg-white relative hidden lg:block border-l border-border">
+        <div className="absolute inset-0 flex items-center justify-center">
+          <img 
+            src="/supabase_clj_ts.png" 
+            alt="Supabase Clojure TypeScript" 
+            className="h-64 w-auto object-contain"
+          />
         </div>
       </div>
     </div>
