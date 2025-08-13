@@ -1,3 +1,7 @@
+<div align="center">
+  <img src="./frontend/public/supabase_clj_ts.png" alt="Supabase Clojure TypeScript" width="50%">
+</div>
+
 # supabase-clj-ts
 
 Bring up the development stack
