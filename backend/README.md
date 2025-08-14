@@ -21,9 +21,13 @@ clj -T:build jar
 ```
 and executing it via
 ```sh
-java -jar target/lichtkraft.jar config/local.edn
+java -jar target/supabase-clj-ts.jar
 ```
 
+Build the docker image
+```sh
+docker build -t supabase-clj-ts-backend:latest .
+```
 
 ### Testing
 

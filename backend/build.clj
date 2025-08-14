@@ -5,7 +5,8 @@
 (def version (format "0.1.%s" (b/git-count-revs nil)))
 (def class-dir "target/classes")
 (def basis (b/create-basis {:project "deps.edn"}))
-(def jar-file (format "target/%s-%s.jar" (name service) version))
+;; (def jar-file (format "target/%s-%s.jar" (name service) version))
+(def jar-file (format "target/%s.jar" (name service)))
 (def main 'main)
 
 (defn clean
