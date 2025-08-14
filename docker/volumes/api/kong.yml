@@ -206,6 +206,27 @@ services:
         paths:
           - /analytics/v1/
 
+  ## Custom Backend API routes
+  - name: custom-api-v1
+    _comment: 'Custom Backend: /custom-api/* -> http://backend:8081/*'
+    url: http://backend:8081/
+    routes:
+      - name: custom-api-v1-all
+        strip_path: true
+        paths:
+          - /custom-api/
+    plugins:
+      - name: cors
+      - name: key-auth
+        config:
+          hide_credentials: false
+      - name: acl
+        config:
+          hide_groups_header: true
+          allow:
+            - admin
+            - anon
+
   ## Secure Database routes
   - name: meta
     _comment: 'pg-meta: /pg/* -> http://pg-meta:8080/*'

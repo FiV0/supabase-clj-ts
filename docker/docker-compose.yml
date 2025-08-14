@@ -459,6 +459,7 @@ services:
       context: ../backend/
       dockerfile: Dockerfile
     # image: supabase-clj-ts-backend/latest
+    # don't expose this in prod
     ports:
      - 8181:8081
 
