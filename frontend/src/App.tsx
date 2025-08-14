@@ -3,6 +3,7 @@ import { Login } from '@/pages/Login'
 import { DashboardHome } from '@/pages/DashboardHome'
 import { Items } from '@/pages/Items'
 import { UserSettings } from '@/pages/UserSettings'
+import { Custom } from '@/pages/Custom'
 import { ProtectedRoute } from '@/components/ProtectedRoute'
 import { DashboardLayout } from '@/components/DashboardLayout'
 
@@ -20,6 +21,7 @@ function App() {
                   <Route index element={<DashboardHome />} />
                   <Route path="items" element={<Items />} />
                   <Route path="settings" element={<UserSettings />} />
+                  <Route path="custom" element={<Custom />} />
                 </Routes>
               </DashboardLayout>
             </ProtectedRoute>

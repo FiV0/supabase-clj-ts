@@ -1,4 +1,4 @@
-import { Home, Package, User, LogOut } from "lucide-react"
+import { Home, Package, User, LogOut, Settings } from "lucide-react"
 import { useNavigate, useLocation } from "react-router-dom"
 import {
   Sidebar,
@@ -32,6 +32,14 @@ const menuItems = [
   },
 ]
 
+const customItems = [
+  {
+    title: "Custom API",
+    url: "/dashboard/custom",
+    icon: Settings,
+  },
+]
+
 export function AppSidebar() {
   const navigate = useNavigate()
   const location = useLocation()
@@ -58,6 +66,27 @@ export function AppSidebar() {
           <SidebarGroupContent>
             <SidebarMenu>
               {menuItems.map((item) => (
+                <SidebarMenuItem key={item.title}>
+                  <SidebarMenuButton 
+                    asChild 
+                    isActive={location.pathname === item.url}
+                  >
+                    <button onClick={() => navigate(item.url)}>
+                      <item.icon />
+                      <span>{item.title}</span>
+                    </button>
+                  </SidebarMenuButton>
+                </SidebarMenuItem>
+              ))}
+            </SidebarMenu>
+          </SidebarGroupContent>
+        </SidebarGroup>
+        
+        <SidebarGroup>
+          <SidebarGroupLabel>Custom</SidebarGroupLabel>
+          <SidebarGroupContent>
+            <SidebarMenu>
+              {customItems.map((item) => (
                 <SidebarMenuItem key={item.title}>
                   <SidebarMenuButton 
                     asChild 
