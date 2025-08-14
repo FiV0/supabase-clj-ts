@@ -33,3 +33,7 @@ services:
   storage:
     volumes:
       - /var/lib/storage
+
+  frontend:
+    profiles:
+      - disabled
