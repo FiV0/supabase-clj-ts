@@ -1,1 +1,6 @@
+.clj-kondo
+.lsp
+
 **/.claude
+**/.nrepl-port
+**/.cpcache
