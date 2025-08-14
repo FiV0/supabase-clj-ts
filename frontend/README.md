@@ -67,3 +67,8 @@ export default tseslint.config([
   },
 ])
 ```
+
+## Building
+```sh
+docker build -t supabase-clj-ts-frontend:latest .
+```
