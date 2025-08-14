@@ -458,9 +458,9 @@ services:
     build:
       context: ../backend/
       dockerfile: Dockerfile
-    image: supabase-clj-ts-backend/latest
+    # image: supabase-clj-ts-backend/latest
     ports:
-     - 8081:8081
+     - 8181:8081
 
 volumes:
   db-config:

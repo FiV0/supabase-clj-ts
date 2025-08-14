@@ -1,5 +1,6 @@
 (ns main
-  (:require [clojure.tools.logging :as log]
+  (:require [clj-swagger.server]
+            [clojure.tools.logging :as log]
             [integrant.core :as ig])
   (:gen-class))
 
