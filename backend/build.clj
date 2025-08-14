@@ -1,11 +1,11 @@
 (ns build
   (:require [clojure.tools.build.api :as b]))
 
-(def lib 'clj.template/lib)
+(def service 'supabase-clj-ts/supabase-clj-ts)
 (def version (format "0.1.%s" (b/git-count-revs nil)))
 (def class-dir "target/classes")
 (def basis (b/create-basis {:project "deps.edn"}))
-(def jar-file (format "target/%s-%s.jar" (name lib) version))
+(def jar-file (format "target/%s-%s.jar" (name service) version))
 (def main 'main)
 
 (defn clean
