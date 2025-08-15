@@ -39,3 +39,15 @@ user> (init)
 ```
 
 You can replace the backend with whatever server (written in your favourite language) you like.
+
+### Deploy
+
+You can start the whole stack (without development mode) in the docker directory by
+```sh
+docker compose up -d
+```
+This will serve the frontend at `localhost:8080`.
+If you change something you need to force the builds.
+```sh
+docker compose up -d --build
+```
