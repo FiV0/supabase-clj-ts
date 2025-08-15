@@ -1,5 +1,3 @@
-version: "3.8"
-
 services:
   studio:
     build:
@@ -34,6 +32,14 @@ services:
     volumes:
       - /var/lib/storage
 
+  kong:
+    extra_hosts:
+      - "backend:host-gateway"
+
   frontend:
+    profiles:
+      - disabled
+
+  backend:
     profiles:
       - disabled
