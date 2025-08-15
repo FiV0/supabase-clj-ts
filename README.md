@@ -7,10 +7,10 @@
 A template using all the nice features of supabase (Auth, PostgREST, Storage) with a Vite + React Typescript frontend and
 an extra custom service written in Clojure.
 
-Beware that the current extra service setup doesn't do any Auth checking (but it passes through kongs auth-key check).
-So if you want you are exposing sensitive data at the custom endpoint you need to implement an JWT authentication check
-in the extra service. If you are not planning to expose the extra service at the frontend,
-just remove backend service exposure from kong.
+Beware that the current extra service setup doesn't do any Auth checking (but it passes through kongs `auth-key` check).
+So if you you are planning to expose sensitive data at the custom endpoint you need to implement an JWT authentication check
+in the extra service. If you are not planning to expose the extra service at the frontend and only use it as service on the backend,
+remove the service exposure from kong.
 
 ### Development
 
